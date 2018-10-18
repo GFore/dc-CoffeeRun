@@ -10,3 +10,8 @@ html, body {
     width: 100%;
 }
 
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

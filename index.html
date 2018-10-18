@@ -10,28 +10,36 @@
 </head>
 <body>
     <h1>CoffeeRun!</h1>
+    <main>
+        <form action="https://dc-coffeerun.herokuapp.com/api/coffeeOrders" method="POST" data-form>
+            <fieldset >
+                <legend> PLACE YOUR ORDER</legend>
+                <label for="coffee">Coffee:
+                    <input type="text" name="coffee" id="coffee" value="Squizzy">
+                </label><br><br>
+                <label for="emailAddress">Email: 
+                    <input type="email" name="emailAddress" id="emailAddress" value="test@mymail.com">
+                </label><br><br>
+                <label for="flavor">Flavor: 
+                    <input type="text" name="flavor" id="flavor" value="Tofu">
+                </label><br><br>
+                <label for="size">Size: 
+                    <input type="text" name="size" id="size" placeholder="Tall, Ariana, Vente" value="Tall">
+                </label><br><br>
+                <label for="strength">Strength:
+                    <input type="number" name="strength" id="strength" min="0" max="100" value="50">
+                </label><br><br>
+                <input type="submit" value="Submit">
+                <input type="reset">
+            </fieldset>
+        </form>
 
-    <form action="https://dc-coffeerun.herokuapp.com/api/coffeeOrders" method="POST">
-        <label for="coffee">Coffee:
-            <input type="text" name="coffee" id="coffee">
-        </label><br><br>
-        <label for="emailAddress">Email: 
-            <input type="email" name="emailAddress" id="emailAddress">
-        </label><br><br>
-        <label for="flavor">Flavor: 
-            <input type="text" name="flavor" id="flavor">
-        </label><br><br>
-        <label for="size">Size: 
-         <input type="text" name="size" id="size" placeholder="Tall, Ariana, Vente">
-        </label><br><br>
-        <label for="strength">Strength:
-         <input type="number" name="strength" id="strength" min="0" max="100" value="99">
-        </label><br><br>
-        <input type="submit" value="Submit">
-        <input type="reset">
+        <fieldset data-placed>
+            <legend> YOUR ORDER </legend>
+                
+        </fieldset>
 
-    </form>
-
+    </main>
 
     <script src="scripts/index.js"></script>
 </body>
